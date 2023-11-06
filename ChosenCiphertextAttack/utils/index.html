@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Progetto di Network Security</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        div {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Progetto di Network Security</h1>
+    <h2>Simulazione di uno Chosen Ciphertext Attack</h2>
+    <p>Anno Accademico 2022/2023</p>
+    <p>Studente: Serafino Boccia</p>
+    <p>Matricola: M63/952</p>
+    <hr />
+    <h2>Descrizione Scenario:</h2>
+    <p><strong>Bob:</strong> Server, conserva una <em>frase segreta</em> e i client devono dimostrare di conoscerla. Bob risponde con 'ACK' se la <em>frase segreta</em> ricevuta &egrave; corretta, altrimenti, risponde con 'NACK' e il messaggio ricevuto decifrato.</p>
+	<p><strong>Alice:</strong> Client legittimo, conosce la <em>frase segreta</em> e la invia al Server.</p>
+	<p><strong>Eve:</strong> Client malizioso, non conosce la <em>frase segreta</em> ma tenta di individuarla. Intercetta il messaggio cifrato di Alice che contiene la <em>frase segreta</em> e interagisce con Bob. Riesce a risale al messaggio originario mediante operazioni matematiche, sfruttando le risposte incaute di Bob.</p>
+	<hr />
+    <h2>Istruzioni per la Simulazione:</h2>
+	<p>Avviare nel seguente ordine:</p>
+	<ol>
+	<li><strong>Server: </strong>bob.py</li>
+	<li><strong>Client legittimo: </strong>alice.py</li>
+	<li><strong>Client malizioso: </strong>eve.py</li>
+	</ol>
+    <hr />
+	<h2>Endpoint Bob:</h2>
+    <ul>
+        <li>Pagina home:           <a href="localhost:5000/">localhost:5000/</a></li>
+        <li>Invia frase segreta:   <a href="localhost:5000/post_message">localhost:5000/post_message</a></li>
+        <li>Ricevi la Public Key:  <a href="localhost:5000/get_publickey">localhost:5000/get_publickey</a></li>
+    </ul>
+</body>
+</html>
