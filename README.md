@@ -1,20 +1,22 @@
-# Elaborato di NetworkSecurity: Chosen Cyphertext Attack
-Simulazione di un semplice Chosen Cyphertext Attack in uno scenario vulnerabile con crittografia RSA 'Textbook'
+# Network Security Project: Chosen Ciphertext Attack
 
-## Descrizione Scenario
+Simulation of a simple Chosen Ciphertext Attack in a vulnerable scenario with 'Textbook' RSA cryptography
+
+## Scenario Description
 ![Sequence Diagram](CCA_sequence_diagram.png)
-1. **Bob (Server)**: Conserva una frase segreta e i client devono dimostrare di conoscerla. Bob risponde con 'ACK' se la frase segreta ricevuta è corretta, altrimenti, risponde con 'NACK' e il messaggio ricevuto decifrato.
-2. **Alice (Client legittimo)**: Conosce la frase segreta e la invia al Server.
-3. **Eve (Client malizioso)**: Non conosce la frase segreta ma tenta di individuarla. Intercetta il messaggio cifrato di Alice che contiene la frase segreta e interagisce con Bob. Riesce a risale al messaggio originario mediante operazioni matematiche, sfruttando le risposte incaute di Bob.
 
-## Istruzioni per la Simulazione
-Per eseguire correttamente la simulazione, seguire il seguente ordine di avvio dei componenti:
-1. **Server (Bob)**: Avviare il server eseguendo `bob.py`.
-2. **Client legittimo (Alice)**: Avviare il client legittimo eseguendo `alice.py`. 
-3. **Client malizioso (Eve)**: Avviare il client malizioso eseguendo `eve.py`.
+1. **Bob (Server)**: Holds a secret phrase, and clients must prove they know it. Bob responds with 'ACK' if the received secret phrase is correct; otherwise, he responds with 'NACK' and the decrypted received message.
+2. **Alice (Legitimate Client)**: Knows the secret phrase and sends it to the Server.
+3. **Eve (Malicious Client)**: Doesn't know the secret phrase but attempts to discover it. Eve intercepts Alice's encrypted message containing the secret phrase and interacts with Bob. She manages to deduce the original message through mathematical operations, exploiting Bob's unsuspecting responses.
 
-## Requisiti
-Per eseguire correttamente la simulazione, assicurati di avere installate le seguenti librerie Python:
+## Simulation Instructions
+To successfully run the simulation, follow the specified startup order for the components:
+1. **Server (Bob)**: Start the server by running `bob.py`.
+2. **Legitimate Client (Alice)**: Start the legitimate client by running `alice.py`.
+3. **Malicious Client (Eve)**: Start the malicious client by running `eve.py`.
+
+## Requirements
+To execute the simulation successfully, ensure you have the following Python libraries installed:
 - [Flask](https://pypi.org/project/Flask/)
 - [Cryptography](https://pypi.org/project/cryptography/)
 - [Requests](https://pypi.org/project/requests/)
